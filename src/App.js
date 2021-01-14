@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import Card from './components/Card';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    let initialState = {
+        cards: [
+            {hex: `#${Math.floor(Math.random()*16777215).toString(16)}`, isLocked: false},
+            {hex: `#${Math.floor(Math.random()*16777215).toString(16)}`, isLocked: false},
+            {hex: `#${Math.floor(Math.random()*16777215).toString(16)}`, isLocked: false},
+            {hex: `#${Math.floor(Math.random()*16777215).toString(16)}`, isLocked: false},
+            {hex: `#${Math.floor(Math.random()*16777215).toString(16)}`, isLocked: false},
+            {hex: `#${Math.floor(Math.random()*16777215).toString(16)}`, isLocked: false},
+        ]
+    }
+    this.state = initialState;
+}
+_randomize() {
+
+}
+  render() {
+    return (
+      <div>
+        <div>
+        <button type="button" className="btn btn-primary btn-lg btn-block">Randomize!</button>
+        </div>
+        <div className="card-group">
+            <Card />
+            <Card />
+            <Card />
+        </div>
+        <div className="card-group">
+            <Card />
+            <Card />
+            <Card />
+        </div>
+      </div>
+    )
+  }
 }
 
-export default App;
+
+
