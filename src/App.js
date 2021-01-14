@@ -19,6 +19,10 @@ export default class App extends Component {
 _randomize() {
 
 }
+
+_toggle() {
+
+}
   render() {
     return (
       <div>
@@ -26,14 +30,14 @@ _randomize() {
         <button type="button" className="btn btn-primary btn-lg btn-block">Randomize!</button>
         </div>
         <div className="card-group">
-            <Card />
-            <Card />
-            <Card />
+            <Card color={} toggle={}/>
+            <Card color={} toggle={}/>
+            <Card color={} toggle={}/>
         </div>
         <div className="card-group">
-            <Card />
-            <Card />
-            <Card />
+        <Card color={} toggle={}/>
+        <Card color={} toggle={}/>
+        <Card color={} toggle={}/>
         </div>
       </div>
     )
