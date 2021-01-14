@@ -27,17 +27,17 @@ _toggle() {
     return (
       <div>
         <div>
-        <button type="button" className="btn btn-primary btn-lg btn-block">Randomize!</button>
+        <button type="button" className="btn btn-primary btn-lg btn-block" onClick={this._randomize}>Randomize!</button>
         </div>
         <div className="card-group">
-            <Card color={} toggle={}/>
-            <Card color={} toggle={}/>
-            <Card color={} toggle={}/>
+            <Card color={} toggle={this._toggle}/>
+            <Card color={} toggle={this._toggle}/>
+            <Card color={} toggle={this._toggle}/>
         </div>
         <div className="card-group">
-        <Card color={} toggle={}/>
-        <Card color={} toggle={}/>
-        <Card color={} toggle={}/>
+        <Card color={} toggle={this._toggle}/>
+        <Card color={} toggle={this._toggle}/>
+        <Card color={} toggle={this._toggle}/>
         </div>
       </div>
     )
